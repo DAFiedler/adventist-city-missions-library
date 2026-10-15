@@ -748,16 +748,16 @@
                 "label": "6. Fort Worth",
                 "url": "https://adventistcitymissions.org/index.php/download_file/2f82902b-12b4-46c9-9337-2a88279d0c65/236",
                 "external": false
+              },
+              {
+                "kind": "download",
+                "label": "7. Washington, DC",
+                "url": "https://adventistcitymissions.org/index.php/download_file/view/d05e775b-dad3-404f-bee0-fc86d73a08e7/236",
+                "external": false
               }
             ]
           }
         ]
-      },
-      {
-        "kind": "download",
-        "label": "7. NEW - Washington, DC",
-        "url": "https://adventistcitymissions.org/index.php/download_file/view/d05e775b-dad3-404f-bee0-fc86d73a08e7/236",
-        "external": false
       }
     ]
   },
