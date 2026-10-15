@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { SiteHeader, SiteFooter } from '@/components/site/site-layout';
 import { resourceHead } from '@/components/site/resource-page';
 import resources from '@/data/resources.json';
-import cityImage from '@/assets/city-morning.jpg';
+import cityImage from '@/assets/city-morning.webp';
 
 export const Route = createFileRoute('/')({
   head: () => resourceHead('Home Page'),
