@@ -8,6 +8,8 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
+    pages: [{ path: "/" }, { path: "/daf-pubs" }, { path: "/daf-presentations" }, { path: "/tindall" }, { path: "/loma-linda" }, { path: "/jhk-books" }, { path: "/jhk-misc" }, { path: "/hydro" }, { path: "/mega" }, { path: "/misc" }, { path: "/eg-white-topics" }],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },

@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DafPresentationsRouteImport } from './routes/daf-presentations'
+import { Route as DafPubsRouteImport } from './routes/daf-pubs'
+import { Route as EgWhiteTopicsRouteImport } from './routes/eg-white-topics'
+import { Route as HydroRouteImport } from './routes/hydro'
+import { Route as JhkBooksRouteImport } from './routes/jhk-books'
+import { Route as JhkMiscRouteImport } from './routes/jhk-misc'
+import { Route as LomaLindaRouteImport } from './routes/loma-linda'
+import { Route as MegaRouteImport } from './routes/mega'
+import { Route as MiscRouteImport } from './routes/misc'
+import { Route as TindallRouteImport } from './routes/tindall'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DafPresentationsRoute = DafPresentationsRouteImport.update({
+  id: '/daf-presentations',
+  path: '/daf-presentations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DafPubsRoute = DafPubsRouteImport.update({
+  id: '/daf-pubs',
+  path: '/daf-pubs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EgWhiteTopicsRoute = EgWhiteTopicsRouteImport.update({
+  id: '/eg-white-topics',
+  path: '/eg-white-topics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HydroRoute = HydroRouteImport.update({
+  id: '/hydro',
+  path: '/hydro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JhkBooksRoute = JhkBooksRouteImport.update({
+  id: '/jhk-books',
+  path: '/jhk-books',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JhkMiscRoute = JhkMiscRouteImport.update({
+  id: '/jhk-misc',
+  path: '/jhk-misc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LomaLindaRoute = LomaLindaRouteImport.update({
+  id: '/loma-linda',
+  path: '/loma-linda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MegaRoute = MegaRouteImport.update({
+  id: '/mega',
+  path: '/mega',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MiscRoute = MiscRouteImport.update({
+  id: '/misc',
+  path: '/misc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TindallRoute = TindallRouteImport.update({
+  id: '/tindall',
+  path: '/tindall',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/daf-presentations': typeof DafPresentationsRoute
+  '/daf-pubs': typeof DafPubsRoute
+  '/eg-white-topics': typeof EgWhiteTopicsRoute
+  '/hydro': typeof HydroRoute
+  '/jhk-books': typeof JhkBooksRoute
+  '/jhk-misc': typeof JhkMiscRoute
+  '/loma-linda': typeof LomaLindaRoute
+  '/mega': typeof MegaRoute
+  '/misc': typeof MiscRoute
+  '/tindall': typeof TindallRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/daf-presentations': typeof DafPresentationsRoute
+  '/daf-pubs': typeof DafPubsRoute
+  '/eg-white-topics': typeof EgWhiteTopicsRoute
+  '/hydro': typeof HydroRoute
+  '/jhk-books': typeof JhkBooksRoute
+  '/jhk-misc': typeof JhkMiscRoute
+  '/loma-linda': typeof LomaLindaRoute
+  '/mega': typeof MegaRoute
+  '/misc': typeof MiscRoute
+  '/tindall': typeof TindallRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/daf-presentations': typeof DafPresentationsRoute
+  '/daf-pubs': typeof DafPubsRoute
+  '/eg-white-topics': typeof EgWhiteTopicsRoute
+  '/hydro': typeof HydroRoute
+  '/jhk-books': typeof JhkBooksRoute
+  '/jhk-misc': typeof JhkMiscRoute
+  '/loma-linda': typeof LomaLindaRoute
+  '/mega': typeof MegaRoute
+  '/misc': typeof MiscRoute
+  '/tindall': typeof TindallRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/daf-presentations'
+    | '/daf-pubs'
+    | '/eg-white-topics'
+    | '/hydro'
+    | '/jhk-books'
+    | '/jhk-misc'
+    | '/loma-linda'
+    | '/mega'
+    | '/misc'
+    | '/tindall'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/daf-presentations'
+    | '/daf-pubs'
+    | '/eg-white-topics'
+    | '/hydro'
+    | '/jhk-books'
+    | '/jhk-misc'
+    | '/loma-linda'
+    | '/mega'
+    | '/misc'
+    | '/tindall'
+  id:
+    | '__root__'
+    | '/'
+    | '/daf-presentations'
+    | '/daf-pubs'
+    | '/eg-white-topics'
+    | '/hydro'
+    | '/jhk-books'
+    | '/jhk-misc'
+    | '/loma-linda'
+    | '/mega'
+    | '/misc'
+    | '/tindall'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DafPresentationsRoute: typeof DafPresentationsRoute
+  DafPubsRoute: typeof DafPubsRoute
+  EgWhiteTopicsRoute: typeof EgWhiteTopicsRoute
+  HydroRoute: typeof HydroRoute
+  JhkBooksRoute: typeof JhkBooksRoute
+  JhkMiscRoute: typeof JhkMiscRoute
+  LomaLindaRoute: typeof LomaLindaRoute
+  MegaRoute: typeof MegaRoute
+  MiscRoute: typeof MiscRoute
+  TindallRoute: typeof TindallRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/daf-presentations': {
+      id: '/daf-presentations'
+      path: '/daf-presentations'
+      fullPath: '/daf-presentations'
+      preLoaderRoute: typeof DafPresentationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daf-pubs': {
+      id: '/daf-pubs'
+      path: '/daf-pubs'
+      fullPath: '/daf-pubs'
+      preLoaderRoute: typeof DafPubsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eg-white-topics': {
+      id: '/eg-white-topics'
+      path: '/eg-white-topics'
+      fullPath: '/eg-white-topics'
+      preLoaderRoute: typeof EgWhiteTopicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hydro': {
+      id: '/hydro'
+      path: '/hydro'
+      fullPath: '/hydro'
+      preLoaderRoute: typeof HydroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jhk-books': {
+      id: '/jhk-books'
+      path: '/jhk-books'
+      fullPath: '/jhk-books'
+      preLoaderRoute: typeof JhkBooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jhk-misc': {
+      id: '/jhk-misc'
+      path: '/jhk-misc'
+      fullPath: '/jhk-misc'
+      preLoaderRoute: typeof JhkMiscRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loma-linda': {
+      id: '/loma-linda'
+      path: '/loma-linda'
+      fullPath: '/loma-linda'
+      preLoaderRoute: typeof LomaLindaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mega': {
+      id: '/mega'
+      path: '/mega'
+      fullPath: '/mega'
+      preLoaderRoute: typeof MegaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/misc': {
+      id: '/misc'
+      path: '/misc'
+      fullPath: '/misc'
+      preLoaderRoute: typeof MiscRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tindall': {
+      id: '/tindall'
+      path: '/tindall'
+      fullPath: '/tindall'
+      preLoaderRoute: typeof TindallRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DafPresentationsRoute: DafPresentationsRoute,
+  DafPubsRoute: DafPubsRoute,
+  EgWhiteTopicsRoute: EgWhiteTopicsRoute,
+  HydroRoute: HydroRoute,
+  JhkBooksRoute: JhkBooksRoute,
+  JhkMiscRoute: JhkMiscRoute,
+  LomaLindaRoute: LomaLindaRoute,
+  MegaRoute: MegaRoute,
+  MiscRoute: MiscRoute,
+  TindallRoute: TindallRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
