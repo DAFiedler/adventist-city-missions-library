@@ -10,5 +10,6 @@
 <!-- LOVABLE:END -->
 
 - Keep the website's original content in browser-safe data modules shared by the static pages, so copy and download links have one source of truth.
+- Keep original page columns and rich text formatting in the shared original-layout data module, with download URLs drawn from the resource inventory, so static pages reproduce the source layout without CMS dependencies.
 - Prerender all public content pages with explicit paths and no visitor-specific state, so the website serves static HTML.
 - Define visual roles and responsive layouts in src/styles.css and use the shared Button for interactive controls, so the redesign stays consistent.
