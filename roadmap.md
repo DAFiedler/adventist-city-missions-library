@@ -4,4 +4,4 @@
 - [x] Configure static prerendering and verify navigation, downloads, and mobile layout.
 - [x] Restore the original website's layout and styling closely across all pages.
 - [x] Verify restored pages and smaller-screen navigation and downloads.
-- [ ] Add the tenth Dave Fiedler publication, update availability copy and Amazon link, and verify the page.
+- [x] Add the tenth Dave Fiedler publication, update availability copy and Amazon link, and verify the page.
