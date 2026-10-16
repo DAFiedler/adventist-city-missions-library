@@ -14,5 +14,5 @@ export function PageHeading({ title }: { title: string }) {
 }
 
 export function SiteFooter() {
-  return <footer className="site-footer"><div className="site-container"><p className="footer-email"><a href="mailto:dfiedler@adventistcitymissions.org">dfiedler@adventistcitymissions.org</a></p><div className="footer-bottom"><span>Copyright 2026. Built with <strong><a href="https://www.concretecms.org" rel="nofollow">Concrete CMS</a></strong>.</span><a href="https://adventistcitymissions.org/index.php/login">Log in</a></div></div></footer>;
+  return <footer className="site-footer"><div className="site-container"><p className="footer-email"><a href="mailto:dfiedler@adventistcitymissions.org">dfiedler@adventistcitymissions.org</a></p><div className="footer-bottom"><span>Copyright 2026.</span></div></div></footer>;
 }
