@@ -7,3 +7,4 @@
 - [x] Add the tenth Dave Fiedler publication, update availability copy and Amazon link, and verify the page.
 - [x] Add the supplied tenth-publication cover at the bottom right, match cover sizing, and put the period inside item 10’s closing bracket.
 - [x] Add the uploaded PDF as publication download 13 and align wrapped download titles beneath their text.
+- [x] Move Tindall download 14 to the first column and correct download 22’s spacing and wrapped alignment.
