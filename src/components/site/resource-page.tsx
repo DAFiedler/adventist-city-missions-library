@@ -13,7 +13,10 @@ type LayoutBlock = { kind: string; html?: string; label?: string; url?: string; 
 function OriginalBlocks({ blocks }: { blocks: LayoutBlock[] }) {
   return <>{blocks.map((block, i) => {
     if (block.kind === 'html') return <div key={i} className="original-copy download-heading" dangerouslySetInnerHTML={{ __html: block.html ?? '' }} />;
-    if (block.kind === 'download') return <div className="download-item" key={i}><Button variant="link" asChild className="original-download"><a href={block.url} target="_blank" rel="noopener noreferrer" download={block.external ? undefined : true} aria-label={`${block.external ? 'Listen to' : 'Download'} ${block.label}`}>{block.label}</a></Button></div>;
+    if (block.kind === 'download') {
+      const numberedLabel = block.label?.match(/^(\d+\.)\s+(.*)$/);
+      return <div className="download-item" key={i}><Button variant="link" asChild className={`original-download${numberedLabel ? ' numbered-download' : ''}`}><a href={block.url} target="_blank" rel="noopener noreferrer" download={block.external ? undefined : true} aria-label={`${block.external ? 'Listen to' : 'Download'} ${block.label}`}>{numberedLabel ? <><span className="download-number">{numberedLabel[1]} </span><span className="download-title">{numberedLabel[2]}</span></> : block.label}</a></Button></div>;
+    }
     return <div key={i} className={block.kind === 'row' ? 'download-columns' : 'download-column'}><OriginalBlocks blocks={block.children ?? []} /></div>;
   })}</>;
 }
