@@ -1,0 +1,25 @@
+name: Static Site Deploy
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: bun run build
+      - name: Rearrange Files
+        run: |
+          mkdir -p temp_deploy
+          cp -r .output/public/* temp_deploy/ || cp -r dist/* temp_deploy/
+          rm -rf *
+          cp -r temp_deploy/* .
+          rm -rf temp_deploy
+      - name: Push to Deploy Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .
